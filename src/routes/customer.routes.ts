@@ -1,15 +1,15 @@
 import { Router,Request,Response} from "express";
 
-export class GreetingRoute{
-    private static instance:GreetingRoute;
+export class CustomerRoute{
+    private static instance:CustomerRoute;
 
-    public static getInstance():GreetingRoute{
-        if(!GreetingRoute.instance){
-            GreetingRoute.instance = new GreetingRoute();
+    public static getInstance():CustomerRoute{
+        if(!CustomerRoute.instance){
+            CustomerRoute.instance = new CustomerRoute();
 
         }
 
-        return GreetingRoute.instance;
+        return CustomerRoute.instance;
 
     }
 
@@ -22,7 +22,6 @@ export class GreetingRoute{
     private setupRoutes(){
         this.router.get("/", (req:Request, res:Response) => {
             res.send("Hello World");
-            
         });
         this.router.post("/", (req:Request, res:Response) => {
             const {name} = req.body;
@@ -31,10 +30,4 @@ export class GreetingRoute{
     }
 
 }
-
-
-
-
-
-
 
