@@ -21,7 +21,7 @@ export class GreetingRoute{
 
     private setupRoutes(){
         this.router.get("/", (req:Request, res:Response) => {
-            res.send("Hello World");
+            res.send("Hello World CNP");
             
         });
         this.router.post("/", (req:Request, res:Response) => {
